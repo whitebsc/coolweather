@@ -1,5 +1,6 @@
 package android.coolweather.com.coolweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.coolweather.com.coolweather.gson.Forecast;
 import android.coolweather.com.coolweather.gson.Weather;
@@ -219,6 +220,8 @@ public class WeatherActivity extends AppCompatActivity {
 
         weatherLayout.setVisibility(View.VISIBLE);
 
+        Intent intent = new Intent(this,AutoUpdateService.class);
+        startService(intent);
 
 
 
